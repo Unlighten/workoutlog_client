@@ -12,8 +12,8 @@ $(function() {
 				}
 				$("#log-definition").children().remove();
 				$("#log-definition").append(opts);
-				$("#update-definition").children().remove();
-				$("#update-definition").append(opts);
+				// $("#update-definition").children().remove();
+				// $("#update-definition").append(opts);
 			},
 
 			setHistory: function() {
@@ -49,6 +49,7 @@ $(function() {
 		      	});
 
 		      	logger.done(function(data) {
+		      		console.log(data)
 	      			WorkoutLog.log.workouts.push(data);
 	      			$("#log-description").val("");
 					$("#log-result").val("");
@@ -157,7 +158,7 @@ $(function() {
 		}
 	});
 
-	$("#log-save").on("click", WorkoutLog.log.create);
+	$("#log-save").on("click", WorkoutLog.log.create());
 	$("#history-list").delegate('.remove', 'click', WorkoutLog.log.delete);
 	$("#log-update").on("click", WorkoutLog.log.updateWorkout);
 	$("#history-list").delegate('.update', 'click', WorkoutLog.log.getWorkout);
