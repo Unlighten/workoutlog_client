@@ -1,7 +1,7 @@
 $(function(){
 
 var WorkoutLog = (function($, undefined) {
-      var API_BASE =  "http://localhost:3000/api/";
+      var API_BASE =  "https://alm-workoutlog-server.herokuapp.com/api/";
       var userDefinitions = [];
 
       var setAuthHeader = function(sessionToken) {

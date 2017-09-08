@@ -4,13 +4,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/http-server/bin/http-server"
+    "start": "node ./node_modules/http-server/bin/http-server",
+    "postninstall": "bower install"
   },
   "author": "Aaron Moore",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "bower": "^1.8.0",
     "http-server": "^0.10.0"
   },
-  "dependencies": {},
-  "description": ""
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  }
 }
