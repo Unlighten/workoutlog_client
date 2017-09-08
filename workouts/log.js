@@ -12,18 +12,19 @@ $(function() {
 				}
 				$("#log-definition").children().remove();
 				$("#log-definition").append(opts);
-				// $("#update-definition").children().remove();
-				// $("#update-definition").append(opts);
+				$("#update-definition").children().remove();
+				$("#update-definition").append(opts);
 			},
 
 			setHistory: function() {
 				var history = WorkoutLog.log.workouts;
+				console.table(history)
 				var len = history.length;
 				var lis = "";
 					for (var i = 0; i < len; i++) {
 					lis += "<li class='list-group-item'>" + 
 					// history[i].id + " - " + 
-					history[i].def + " - " + 
+					history[i].definition + " - " + 
 					history[i].result + " " +
 					// pass the log.id into the button's id attribute // watch your quotes!
 					"<div class='pull-right'>" +
@@ -41,6 +42,7 @@ $(function() {
 		         	def: $("#log-definition option:selected").text()
 		      	};
 		      	var postData = { log: itsLog };
+		      	console.table(postData)
 		      	var logger = $.ajax({
 		         	type: "POST",
 		         	url: WorkoutLog.API_BASE + "log",
@@ -158,7 +160,7 @@ $(function() {
 		}
 	});
 
-	$("#log-save").on("click", WorkoutLog.log.create());
+	$("#log-save").on("click", WorkoutLog.log.create);
 	$("#history-list").delegate('.remove', 'click', WorkoutLog.log.delete);
 	$("#log-update").on("click", WorkoutLog.log.updateWorkout);
 	$("#history-list").delegate('.update', 'click', WorkoutLog.log.getWorkout);
