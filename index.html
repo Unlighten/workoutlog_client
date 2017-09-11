@@ -9,6 +9,7 @@
 
   <!-- Bootstrap -->
   <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
 
 </head>
 
@@ -16,29 +17,64 @@
 
 
   <ul class="nav nav-tabs">
+    <li><a href="#home" class="logo" data-toggle="tab"><img class="img-logo"src="/assets/swole-o-clock-logo-supplement-central.jpg"></a></li>
     <li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a>
       <!--logout too -->
     </li>
-    <li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
-    <li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
-    <li><a href="#history" class="disabled" data-toggle="tab">View History</a></li>
+    <li><a href="#define" class="disabled" data-toggle="tab">Define Workout</a></li>
+    <li><a href="#log" class="disabled" data-toggle="tab">Log Workout</a></li>
+    <li><a href="#history" class="disabled" data-toggle="tab">Workout History</a></li>
     <a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
 
   </ul>
 
-  <div class="container">
-    <div class="tab-content">
-      <div class="tab-pane active" id="home">
-        <h2>Workout Log</h2>
-        <div id="forLogin">
-          <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
-          <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
+  <div class="container sidebar col-md-3 pull-left">
+    <br><br><br><br><br><br><br><br>
+    <h2 class="side-title">Already a Swole member?</h2>
+      <br>
+      <div class="">
+        <div class="alert alert-danger" style="display: none;" role="alert" id="li_error"></div>
+        <label class="whitelabel" for="li_username">Username:</label>
+        <input id="li_username" />
+        <br>
+        <label class="whitelabel" for="li_password">Password:</label>
+        <input type="password" id="li_password" />
+        <br>
+        <br>
+        <button id="login" type="button" class="btn btn-primary">Login</button>
+      </div>
+
+      <br><br><br><br><br><br><br><br>
+      <h2 class="side-title">Not yet Swole?</h2>
+      <br>
+      <div id="forLogin">
           <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
         </div>
+
         <div id="forLogout" style="display:none;">
           <button class="btn btn-primary">Logout</button>
         </div>
       </div>
+
+  <div class="container mid col-md-9 pull-right">
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">
+        <h2 class="mid_title">Sample Workouts</h2>
+        <hr class="star-primary">
+        <div class="col-md-6 box">
+          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6 box">
+          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+      <div class="col-md-6 box">
+          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6 box">
+          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
       <!-- DEFINE -->
       <div class="tab-pane fade" id="define">
         <h2>Define</h2>
@@ -89,7 +125,7 @@
       </div>
     </div>
 
- <div class="modal fade" id="login-modal" role="dialog">
+ <!-- <div class="modal fade" id="login-modal" role="dialog">
    <div class="modal-dialog">
      <div class="modal-content">
        <div class="modal-header">
@@ -109,7 +145,7 @@
       </div>
      </div>
    </div>
- </div>
+ </div> -->
  <div class="modal fade" id="signup-modal" role="dialog">
    <div class="modal-dialog">
      <div class="modal-content">
@@ -131,6 +167,7 @@
      </div>
    </div>
  </div>
+</div>
 
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
