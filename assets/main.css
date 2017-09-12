@@ -141,7 +141,6 @@ hr.star-primary {
 width: 800px;
 margin: 30px auto;
 color: white;
-text-align:center;
 }
 
 .watchmen {
@@ -158,6 +157,7 @@ text-align:center;
 	border: 1px solid black;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	padding-left: 200px;
 }
 
 .stopbut {
