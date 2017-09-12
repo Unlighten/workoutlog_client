@@ -1,11 +1,7 @@
-.logo {
-	border: 1px solid grey !important;
-	background-color: white;
-}
-
 .nav {
-	background-color: black;
-	border: 1px solid grey;
+	background-image: url("/assets/bgc.jpg");
+	border-bottom: 2px solid purple;
+	border-top: 2px solid purple;
 	font-size: 20px;
 	position: fixed;
 	width: 100%;
@@ -16,13 +12,31 @@
 a {
 	color: white;
 	font-weight: bold;
+	margin-top: 10px;
+	height: 50px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: black;
+	background-color: hotpink;
+	border: 1px solid purple;
+	border-radius: 0;
+}
+
+a.logo {
+	margin: 0;
 	height: 70px;
+	padding: 0 !important;
 }
 
 a:hover{
-	border: 1px solid grey !important;
-	color: black;
-	background-color: white;
+	border: 1px solid hotpink !important;
+	border-radius: 0 !important;
+	color: white;
+	background-color: purple !important;
 }
 
 
@@ -31,6 +45,7 @@ a:hover{
 	font-weight: bold;
 	margin-top: 5%;
 	color: black;
+	font-size: 50px;
 }
 
 .box {
@@ -48,10 +63,11 @@ a:hover{
 	position: fixed;
     height: 100%;
     width: auto;
-    background-color: black;
-    border-right: 1px solid grey;
+    background-image: url("/assets/bgc.jpg");
+    border-right: 2px solid purple;
     margin-top: 0 !important;
     z-index: 5;
+    display: inline-block;
 }
 
 .side-title {
@@ -60,17 +76,18 @@ a:hover{
 }
 
 .mid {
-	position: relative;
 	background-color: transparent;
+	height: auto;
+	display: block;
 }
 
 .img-logo {
-	height: 50px;
+	height: 67px;
 	width: auto;
 }
 
 html {
-	background-image: url("uoyx3kz.jpg");
+	background-image: url("/assets/Prem.png");
 }
 
 hr.star-primary {
@@ -84,3 +101,95 @@ hr.star-primary {
 .container {
 	margin-top: 10%;
 }
+
+.sidebar-login {
+	text-align: right;
+}
+
+#li_error.alert.alert-danger {
+	width: 200px;
+	text-align: center;
+	margin-right: 0;
+	margin-left: 30px;
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+
+.btn {
+	border: 1px solid purple;
+	background-color: hotpink;
+}
+
+.btn:hover {
+	border: 1px solid hotpink;
+	background-color: purple;
+}
+
+.El-Video {
+	border: 2px solid purple;
+}
+
+
+
+
+
+
+
+
+
+.wrapper {
+width: 800px;
+margin: 30px auto;
+color: white;
+text-align:center;
+}
+
+.watchmen {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 5%;
+	color: black;
+	font-size: 50px;
+}
+
+.stopwatchdigits {
+	font-size: 100px;
+	color: black;
+	border: 1px solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.stopbut {
+border: 1px solid purple;
+background-color: hotpink;
+color: white;
+text-decoration:none;
+cursor:pointer;
+font-size: 1.8em;
+font-family: bold;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+outline: none;
+}
+
+.stopbut:hover {
+border: 1px solid hotpink;
+background-color: purple;
+color: white;
+text-decoration:none;
+cursor:pointer;
+font-size: 1.8em;
+font-family: bold;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+outline: none;
+}
+
+
+
+
+
+
