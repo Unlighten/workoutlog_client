@@ -1,7 +1,7 @@
 .nav {
 	background-image: url("/assets/bgc.jpg");
-	border-bottom: 2px solid purple;
-	border-top: 2px solid purple;
+	border-bottom: 2px solid transparent;
+	border-top: 0px solid black;
 	font-size: 20px;
 	position: fixed;
 	width: 100%;
@@ -30,6 +30,12 @@ a.logo {
 	margin: 0;
 	height: 70px;
 	padding: 0 !important;
+}
+
+a.logo:hover{
+	border: 0px solid transparent !important;
+	color: white;
+	background-color: transparent !important;
 }
 
 a:hover{
@@ -62,15 +68,24 @@ a:hover{
 .sidebar {
 	position: fixed;
     height: 100%;
-    width: auto;
+    width: 23%;
     background-image: url("/assets/bgc.jpg");
-    border-right: 2px solid purple;
+    border-right: 2px solid transparent;
     margin-top: 0 !important;
     z-index: 5;
     display: inline-block;
 }
 
-.side-title {
+.hidden-side-image {
+	height: 350px;
+	margin-left: 1%;
+	width: 200px;
+	overflow: hidden;
+	position: fixed;
+}
+
+.side-title-1, .side-title-2 {
+	text-align: center;
 	font-size: 20px;
 	color: white;
 }
@@ -82,8 +97,10 @@ a:hover{
 }
 
 .img-logo {
-	height: 67px;
-	width: auto;
+	/*height: 67px;*/
+	height: 150px;
+	width: 250px;
+	border-left: 0px solid transparent;
 }
 
 html {
@@ -103,7 +120,7 @@ hr.star-primary {
 }
 
 .sidebar-login {
-	text-align: right;
+	text-align: left;
 }
 
 #li_error.alert.alert-danger {
@@ -129,13 +146,9 @@ hr.star-primary {
 	border: 2px solid purple;
 }
 
-
-
-
-
-
-
-
+#signup-but {
+	margin-left: 32.5%;
+}
 
 .wrapper {
 width: 800px;
@@ -157,7 +170,7 @@ color: white;
 	border: 1px solid black;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 200px;
+	padding-left: 140px;
 }
 
 .stopbut {
@@ -171,6 +184,7 @@ font-family: bold;
 padding:18px 10px;
 width:180px;
 margin: 10px;
+margin-left: 55px;
 outline: none;
 }
 
@@ -178,18 +192,33 @@ outline: none;
 border: 1px solid hotpink;
 background-color: purple;
 color: white;
-text-decoration:none;
-cursor:pointer;
-font-size: 1.8em;
-font-family: bold;
-padding:18px 10px;
-width:180px;
-margin: 10px;
-outline: none;
 }
 
+#su_email{
+	margin-left: 2%;
+}
 
+#su_fname {
+	margin-right: 3.6%;
+}
 
+#su_username{
+	margin-right: 5%;
+} 
 
+.modal-header, .modal-footer {
+	background-color: pink;
+	border: 1px solid purple;
+}
 
+.modal-body {
+	border: 1px solid purple;
+}
 
+.modal-title {
+	font-weight: bold;
+}
+
+.cancelay {
+	color: white !important;
+}

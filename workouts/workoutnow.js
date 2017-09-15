@@ -2,8 +2,10 @@ window.onload = function () {
   
   var seconds = 00; 
   var tens = 00; 
+  var minutes = 00;
   var appendTens = document.getElementById("tens")
   var appendSeconds = document.getElementById("seconds")
+  var appendMinutes = document.getElementById("minutes")
   var stopbutStart = document.getElementById('stopbut-start');
   var stopbutStop = document.getElementById('stopbut-stop');
   var stopbutReset = document.getElementById('stopbut-reset');
@@ -21,11 +23,13 @@ window.onload = function () {
   
 
   stopbutReset.onclick = function() {
-     clearInterval(Interval);
+    clearInterval(Interval);
+    minutes = "00";
     tens = "00";
   	seconds = "00";
     appendTens.innerHTML = tens;
   	appendSeconds.innerHTML = seconds;
+    appendMinutes.innerHTML = minutes;
   }
   
    
@@ -52,6 +56,14 @@ window.onload = function () {
     
     if (seconds > 9){
       appendSeconds.innerHTML = seconds;
+    }
+
+    if (seconds == 59) {
+      console.log("minutes");
+      minutes++;
+      appendMinutes.innerHTML = "0" + minutes;
+      seconds = 0;
+      appendSeconds.innerHTML = "0";
     }
   
   }

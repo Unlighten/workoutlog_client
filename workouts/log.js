@@ -3,13 +3,17 @@ $(function() {
 		log: {
 			workouts: [],
 
-			setDefinitions: function() {
+			setDefinitions: function(type) {
 				var defs = WorkoutLog.definition.userDefinitions;
 				var len = defs.length;
 				var opts;
 				for (var i = 0; i < len; i++) {
 					opts += "<option value='" + defs[i].id +"'>" + defs[i].description + "</option>";
 				}
+				// $("#" + type + "-definition").children().remove();
+				// $("#" + type + "-definition").append(opts);
+
+
 				$("#log-definition").children().remove();
 				$("#log-definition").append(opts);
 				$("#update-definition").children().remove();
@@ -24,7 +28,7 @@ $(function() {
 					for (var i = 0; i < len; i++) {
 					lis += "<li class='list-group-item'>" + 
 					// history[i].id + " - " + 
-					history[i].definition + " - " + 
+					history[i].def + " - " + 
 					history[i].result + " " +
 					// pass the log.id into the button's id attribute // watch your quotes!
 					"<div class='pull-right'>" +

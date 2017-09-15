@@ -18,40 +18,41 @@
 
 
   <ul class="nav nav-tabs">
-    <li><a href="#home" class="logo" data-toggle="tab"><img class="img-logo"src="/assets/swole-o-clock-logo-supplement-central.jpg"></a></li>
+    <li><a href="#home" class="logo" data-toggle="tab"><img class="img-logo" src="/assets/swole-o-clock-logo-supplement-central.jpg"></a></li>
 
-    <!-- <li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a></li> -->
-
-    <li><a href="#workoutnow" class="disabled" data-toggle="tab">Workout Now</a></li>
-    <li><a href="#define" class="disabled" data-toggle="tab">Define Workout</a></li>
-    <li><a href="#log" class="disabled" data-toggle="tab">Log Workout</a></li>
-    <li><a href="#history" class="disabled" data-toggle="tab">Workout History</a></li>
-    <a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
+    <li><a href="#home" id="loginout" class=" tib-tab invisible" data-toggle="tab">Login</a></li>
+    <li><a href="#workoutnow" class=" tib-tab invisible" data-toggle="tab">Workout Now</a></li>
+    <li><a href="#define" class=" tib-tab invisible" data-toggle="tab">Define Workout</a></li>
+    <li><a href="#log" class=" tib-tab invisible" data-toggle="tab">Log Workout</a></li>
+    <li><a href="#history" class=" tib-tab invisible" data-toggle="tab">Workout History</a></li>
+    <a href="#update-log" data-toggle="tab" class=" tib-tab invisible" type="hidden"></a>
 
   </ul>
 
   <div class="container sidebar">
-    <br><br><br><br><br><br><br><br>
-    <h2 class="side-title">Already a Swole member?</h2>
+    <br><br><br><br><br><br><br><br><br>
+    <h2 class="side-title-1">Already a Swole member?</h2>
+    <img id="side-image" class="hidden-side-image invisible">
       <br>
-      <div class="sidebar-login">
+      <div id="sidebar-login-id" class="sidebar-login">
         <div class="alert alert-danger" style="display: none;" role="alert" id="li_error"></div>
         <label class="whitelabel" for="li_username">Username:</label>
+        <br>
         <input id="li_username" />
         <br>
         <label class="whitelabel" for="li_password">Password:</label>
+        <br>
         <input type="password" id="li_password" />
         <br>
         <br>
-        <button id="login" type="button" class="btn btn-primary">Login</button>
-        <button id="loginout" type="button" class="btn btn-primary">Login</button>
+        <button id="login" type="button" class="btn btn-primary show">Login</button>
       </div>
 
-      <br><br><br><br><br><br><br>
-      <h2 class="side-title">Not yet Swole?</h2>
+      <br><br><br>
+      <h2 class="side-title-2">Not yet Swole?</h2>
       <br>
       <div id="forLogin">
-          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+          <button id="signup-but" data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
         </div>
 
         <div id="forLogout" style="display:none;">
@@ -65,16 +66,16 @@
         <h2 class="mid_title">Looking to Get Swole?</h2>
         <hr class="star-primary">
         <div class="col-md-6 box">
-          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+          <iframe class="El-Video" src="https://www.youtube.com/embed/yrz67cH_P8o" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-md-6 box">
-          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+          <iframe class="El-Video" src="https://www.youtube.com/embed/A8HC4rnQX_k" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
       <div class="col-md-6 box">
-          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+          <iframe class="El-Video" src="https://www.youtube.com/embed/y1r9toPQNkM" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-md-6 box">
-          <iframe class="El-Video" src="https://www.youtube.com/embed/p9FXhMZ0l30" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+          <iframe class="El-Video" src="https://www.youtube.com/embed/0Kvw2BPKjz0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -87,7 +88,7 @@
 
           <!--Cool Clock Font-->
           <p class="stopwatchdigits" style="font-family: 'Orbitron', sans-serif;">
-            <span id="seconds">00</span>:<span id="tens">00</span>
+            <span id="minutes">0</span>:<span id="seconds">00</span>:<span id="tens">00</span>
           </p>
 
           <button class="stopbut" id="stopbut-start">Start</button>
@@ -156,7 +157,7 @@
      <div class="modal-content">
        <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Sign Up</h4>
+        <h4 class="modal-title">Sign Up To Get Swole</h4>
       </div>
       <div class="modal-body">
       <div class="alert alert-danger" role="alert" style="display:none;" id="su_error"></div>
@@ -164,15 +165,47 @@
         <input id="su_username" />
         <label for="su_password">Password:</label>
         <input type="password" id="su_password" />
+        <br><br>
+        <label for="su_fname">First Name:</label>
+        <input type="fname" id="su_fname" />
+        <label for="su_lname">Last Name:</label>
+        <input type="lname" id="su_lname" />
+        <br><br>
+        <label for="su_email">Email:</label>
+        <input type="email" id="su_email" />
+        <br><br>
+        <label for="su_pic">Profile Image:</label>
+        <input id="su_pic" type="file" onchange="previewFile()">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-default cancelay" data-dismiss="modal">Cancel</button>
         <button id="signup" type="button" class="btn btn-primary">Signup</button>
       </div>
      </div>
    </div>
  </div>
 </div>
+    
+    <script>
+       function previewFile(){
+           var preview = document.querySelector('.hidden-side-image');
+           var file    = document.querySelector('input[type=file]').files[0];
+           var reader  = new FileReader();
+
+           reader.onloadend = function () {
+               preview.src = reader.result;
+           }
+
+           if (file) {
+               reader.readAsDataURL(file);
+           } else {
+               preview.src = "";
+           }
+      }
+
+      previewFile();
+  </script>
+
 
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
