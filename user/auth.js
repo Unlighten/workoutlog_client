@@ -46,9 +46,9 @@ $(function(){
       },
 
       login: function() {
-         // var fname = $("#li_fname").val();
-         // var lname = $("#li_lname").val();
-         // var email = $("#li_email").val();
+         var fname = $("#li_fname").val();
+         var lname = $("#li_lname").val();
+         var email = $("#li_email").val();
          var username = $("#li_username").val();
          var password = $("#li_password").val();
          var user = {user:  {username: username, password: password }};
@@ -106,9 +106,9 @@ $(function(){
             $("#signup-but").addClass("invisible");
 
             $("#loginout").text("Logout");
-            // $("#li_fname").val("");
-            // $("#li_lname").val("");
-            // $("#li_email").val("");
+            $("#li_fname").val("");
+            $("#li_lname").val("");
+            $("#li_email").val("");
             $("#li_username").val("");
             $("#li_password").val("");
 
