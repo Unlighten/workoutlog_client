@@ -65,24 +65,24 @@ $(function(){
                WorkoutLog.log.fetchAll();
             }
 
-            var fileReader = new FileReader();
-            fileReader.onload = (function (event) {
-                var ab = data.user.pic;
-               console.log(ab);
-                var ua = new Uint8Array(ab.data); //blob
+            // var fileReader = new FileReader();
+            // fileReader.onload = (function (event) {
+            //     var ab = data.user.pic;
+            //    console.log(ab);
+            //     var ua = new Uint8Array(ab.data); //blob
 
-                var binaryImg;
-                for (var i = 0; i < ua.length; i++) {
-                     binaryImg += String.fromCharCode(ua[i]);
-                }
-                var newImg ='';
-               for (var i = binaryImg.indexOf('C'); i < binaryImg.length; i++){
-                 newImg += binaryImg[i]
-               }
-               var test = new Blob ([newImg], {
-                  type: "plain/jpg"
-               })
-               fileReader.readAsDataURL(test);
+            //     var binaryImg;
+            //     for (var i = 0; i < ua.length; i++) {
+            //          binaryImg += String.fromCharCode(ua[i]);
+            //     }
+            //     var newImg ='';
+            //    for (var i = binaryImg.indexOf('C'); i < binaryImg.length; i++){
+            //      newImg += binaryImg[i]
+            //    }
+            //    var test = new Blob ([newImg], {
+            //       type: "plain/jpg"
+            //    })
+            //    fileReader.readAsDataURL(test);
                //  var img64 = btoa(newImg);
                // console.log(img64);
                //  var image = new Image();
