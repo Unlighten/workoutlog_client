@@ -46,9 +46,9 @@ $(function(){
       },
 
       login: function() {
-         var fname = $("#li_fname").val();
-         var lname = $("#li_lname").val();
-         var email = $("#li_email").val();
+         // var fname = $("#li_fname").val();
+         // var lname = $("#li_lname").val();
+         // var email = $("#li_email").val();
          var username = $("#li_username").val();
          var password = $("#li_password").val();
          var user = {user:  {username: username, password: password }};
@@ -65,24 +65,24 @@ $(function(){
                WorkoutLog.log.fetchAll();
             }
 
-            // var fileReader = new FileReader();
-            // fileReader.onload = (function (event) {
-            //     var ab = data.user.pic;
-            //    console.log(ab);
-            //     var ua = new Uint8Array(ab.data); //blob
+            var fileReader = new FileReader();
+            fileReader.onload = (function (event) {
+                var ab = data.user.pic;
+               console.log(ab);
+                var ua = new Uint8Array(ab.data); //blob
 
-            //     var binaryImg;
-            //     for (var i = 0; i < ua.length; i++) {
-            //          binaryImg += String.fromCharCode(ua[i]);
-            //     }
-            //     var newImg ='';
-            //    for (var i = binaryImg.indexOf('C'); i < binaryImg.length; i++){
-            //      newImg += binaryImg[i]
-            //    }
-            //    var test = new Blob ([newImg], {
-            //       type: "plain/jpg"
-            //    })
-            //    fileReader.readAsDataURL(test);
+                var binaryImg;
+                for (var i = 0; i < ua.length; i++) {
+                     binaryImg += String.fromCharCode(ua[i]);
+                }
+                var newImg ='';
+               for (var i = binaryImg.indexOf('C'); i < binaryImg.length; i++){
+                 newImg += binaryImg[i]
+               }
+               var test = new Blob ([newImg], {
+                  type: "plain/jpg"
+               })
+               fileReader.readAsDataURL(test);
                //  var img64 = btoa(newImg);
                // console.log(img64);
                //  var image = new Image();
@@ -106,9 +106,9 @@ $(function(){
             $("#signup-but").addClass("invisible");
 
             $("#loginout").text("Logout");
-            $("#li_fname").val("");
-            $("#li_lname").val("");
-            $("#li_email").val("");
+            // $("#li_fname").val("");
+            // $("#li_lname").val("");
+            // $("#li_email").val("");
             $("#li_username").val("");
             $("#li_password").val("");
 
