@@ -2,13 +2,13 @@ $(function(){
 // $(function() {
    $.extend(WorkoutLog, {
       signup: function() {
-            var fname = $("#su_fname").val();
-            var lname = $("#su_lname").val();
-            var email = $("#su_email").val();
+            // var fname = $("#su_fname").val();
+            // var lname = $("#su_lname").val();
+            // var email = $("#su_email").val();
             var username = $("#su_username").val();
             var password = $("#su_password").val();
-            var pic = $("#su_pic").val();
-            var user = {user:  {fname: fname, lname: lname, email: email, username: username, password: password, pic: pic }};
+            // var pic = $("#su_pic").val();
+            var user = {user:  {username: username, password: password}};
             var signup = $.ajax({
                type: "POST", 
                url: WorkoutLog.API_BASE + "user", 
@@ -32,12 +32,12 @@ $(function(){
                // go to define tab
                $('.nav-tabs a[href="#workoutnow"]').tab('show');
 
-               $("#su_fname").val("");
-               $("#su_lname").val("");
-               $("#su_email").val("");
+            //    $("#su_fname").val("");
+            //    $("#su_lname").val("");
+            //    $("#su_email").val("");
                $("#su_username").val("");
                $("#su_password").val("");
-               $("#su_pic").val("")
+            //    $("#su_pic").val("")
             })
             .fail(function() {
                $("#su_error").text("There was an issue with your username").show();
@@ -46,9 +46,9 @@ $(function(){
       },
 
       login: function() {
-         // var fname = $("#li_fname").val();
-         // var lname = $("#li_lname").val();
-         // var email = $("#li_email").val();
+      //    var fname = $("#li_fname").val();
+      //    var lname = $("#li_lname").val();
+      //    var email = $("#li_email").val();
          var username = $("#li_username").val();
          var password = $("#li_password").val();
          var user = {user:  {username: username, password: password }};
@@ -97,7 +97,7 @@ $(function(){
             // console.log(data.user.pic);
             $("#login-modal").modal("hide");
             $(".tib-tab").removeClass("invisible");
-            $("#side-image").attr("src", data.user.pic);
+            // $("#side-image").attr("src", data.user.pic);
 
             $(".side-title-1").text("Welcome Back!");
             $("#side-image").removeClass("invisible");
